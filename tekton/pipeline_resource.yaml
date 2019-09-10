@@ -1,0 +1,25 @@
+## Taskに対して渡すartifactを定義するリソース
+
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: git-demo-tekton-master
+spec:
+  type: git
+  params:
+    - name: revision
+      values: master
+    - name: url
+      values: https://github.com/ucpr/test-tekton-ci
+---
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: git-demo-tekton-develop
+spec:
+  type: git
+  params:
+    - name: revision
+      values: develop
+    - name: url
+      values: https://github.com/ucpr/test-tekton-ci
