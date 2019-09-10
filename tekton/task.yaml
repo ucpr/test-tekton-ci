@@ -7,8 +7,8 @@ spec:
     resources:
       - name: gitspace
         type: git
-    steps:
-      - name: go-test
-        images: golang
-        command: ["go"]
-        args: ["test", "./..."]
+  steps:
+    - name: go-test
+      image: golang
+      command: ["go"]
+      args: ["test", "./..."]

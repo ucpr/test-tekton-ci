@@ -8,9 +8,9 @@ spec:
   type: git
   params:
     - name: revision
-      values: master
+      value: master
     - name: url
-      values: https://github.com/ucpr/test-tekton-ci
+      value: https://github.com/ucpr/test-tekton-ci
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
@@ -20,6 +20,6 @@ spec:
   type: git
   params:
     - name: revision
-      values: develop
+      value: develop
     - name: url
-      values: https://github.com/ucpr/test-tekton-ci
+      value: https://github.com/ucpr/test-tekton-ci

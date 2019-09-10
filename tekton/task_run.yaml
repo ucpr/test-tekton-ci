@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1alpha1
 kind: TaskRun
 metadata:
-  name: taskrun-go-test
+  name: taskrun-go-test-master
 spec:
   inputs:
     resources:
@@ -14,7 +14,7 @@ spec:
 apiVersion: tekton.dev/v1alpha1
 kind: TaskRun
 metadata:
-  name: taskrun-go-test
+  name: taskrun-go-test-develop
 spec:
   inputs:
     resources:
