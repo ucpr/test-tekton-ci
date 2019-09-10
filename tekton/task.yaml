@@ -11,4 +11,4 @@ spec:
       - name: go-test
         images: golang
         command: ["go"]
-        args: ["test"]
+        args: ["test", "./..."]
