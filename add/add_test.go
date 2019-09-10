@@ -11,4 +11,11 @@ func TestAdd(t *testing.T) {
 	if actual != expected {
 		t.Errorf("got: %v\nwant: %v", actual, expected)
 	}
+
+	actual = Add(5, 5)
+	expected = 10
+
+	if actual != expected {
+		t.Errorf("got: %v\nwant: %v", actual, expected)
+	}
 }
