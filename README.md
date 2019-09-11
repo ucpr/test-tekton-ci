@@ -1,10 +1,12 @@
 See below for Tekton installation.
 https://github.com/tektoncd/pipeline/blob/master/docs/install.md
 
-```
-$ kubectl apply -f task.yaml
-$ kubectl apply -f pipline_resource.yaml
-$ kubectl apply -f task_run.yaml
+説明
+----
+- `go test`と`docker image`のbuild, pushまで可能
 
-$ kubectl get tr
-```
+usage
+-----
+- `tekton/`にあるyamlを`kubectl apply -f`で.
+- docker hubにpushするために以下の設定が必要
+  - https://github.com/tektoncd/pipeline/blob/master/docs/auth.md
