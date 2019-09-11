@@ -1,0 +1,24 @@
+apiVersion: tekton.dev/v1alpha1
+kind: TaskRun
+metadata:
+  name: build-push-runner-2
+spec:
+  serviceAccount: build-bot
+  taskRef:
+    name: build-push-kaniko
+  inputs:
+    resources:
+    - name: app
+      resourceRef:
+        name: git-demo-tekton-master
+    params:
+    - name: pathToDockerFile
+      value: /workspace/app/Dockerfile
+    - name: pathToContext
+      value: /workspace/app
+  outputs:
+    resources:
+    - name: builtImage
+      resourceRef:
+        name: test-tekton-image
+

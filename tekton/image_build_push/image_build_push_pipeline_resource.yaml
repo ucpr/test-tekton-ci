@@ -1,13 +1,10 @@
-## Taskに対して渡すartifactを定義するリソース
-#
-# imageをbuildするresource
-
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
-  name: image-resource
+  name: test-tekton-image
 spec:
   type: image
   params:
     - name: url
       value: ucpr/test-tekton-ci
+

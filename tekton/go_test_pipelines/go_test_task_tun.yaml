@@ -10,27 +10,6 @@ spec:
           name: git-demo-tekton-master   ## PipelineResourceを指定
   taskRef:
     name: go-test  # taskの名前を指定する
----  
-
-apiVersion: tekton.dev/v1alpha1
-kind: TaskRun
-metadata:
-  name: taskrun-go-test-master
-spec:
-  serviceAccount: build-bot
-  taskRef:
-    name: image-build
-  inputs:
-    resources:
-      - name: app
-        resourceRef:
-          name: git-demo-tekton-master   ## PipelineResourceを指定
-  outputs:
-    resources:
-      - name: buildImage
-        resourceRef:
-          name: image-resource
- 
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: TaskRun
