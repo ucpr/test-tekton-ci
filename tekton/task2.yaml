@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: go-test
+spec:
+  inputs:
+    resources:
+      - name: gitspace
+        type: git
+  steps:
+    - name: go-test
+      image: golang
+      command: ["go"]
+      args: ["test", "./..."]
