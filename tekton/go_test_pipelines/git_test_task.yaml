@@ -5,7 +5,7 @@ metadata:
 spec:
   inputs:
     resources:
-      - name: gitspace
+      - name: app
         type: git
   steps:
     - name: go-test
