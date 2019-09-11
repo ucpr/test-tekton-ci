@@ -1,0 +1,29 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: build-push-kaniko
+spec:
+  inputs:
+    resources:
+    - name: app
+      type: git
+    params:
+    - name: pathToDockerFile
+      description: The path to the dockerfile to build
+      default: /workspace/app/Dockerfile
+    - name: pathToContext
+      description: The build context used by Kaniko
+      default: /workspace/app
+  outputs:
+    resources:
+    - name: builtImage
+      type: image
+  steps:
+  - name: build-and-push
+    image: gcr.io/kaniko-project/executor
+    command:
+    - /kaniko/executor
+    args:
+    - --dockerfile=${inputs.params.pathToDockerFile}
+    - --destination=${outputs.resources.builtImage.url}
+    - --context=${inputs.params.pathToContext}

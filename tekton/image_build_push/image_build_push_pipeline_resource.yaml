@@ -1,0 +1,10 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: test-tekton-image
+spec:
+  type: image
+  params:
+    - name: url
+      value: ucpr/test-tekton-ci
+
