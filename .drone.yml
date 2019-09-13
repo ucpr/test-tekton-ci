@@ -1,10 +1,5 @@
-name: default
-
-kind: pipeline
-type: docker
-
-steps:
-- name: push
-  image: golang
-  commands:
-    - go test ./...
+pipeline:
+  push:
+    image: golang
+    commands:
+      - go test ./...
