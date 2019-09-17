@@ -3,3 +3,8 @@ plugins:
     - size
     - cat
     - golint
+    - mergecommitblocker
+    - lgtm
+    - wip
+    - hold
+    - trigger
