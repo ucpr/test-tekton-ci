@@ -1,4 +1,5 @@
 plugins:
   ucpr/test-tekton-ci:
     - size
-
+    - cat
+    - golint
