@@ -8,3 +8,5 @@ plugins:
   - wip
   - hold
   - trigger
+  - approve
+  - assign
