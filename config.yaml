@@ -1,10 +1,9 @@
 presubmits:
   ucpr/test-tekton-ci:
-    - name: unit-tests
-      always_run: false
-      skip_report: false
-      spec:
-        containers:
-          - image: alpine
-            command: ["/bin/printenv"]
-
+  - name: unit-test
+    always_run: false
+    skip_report: false
+    spec:
+      containers:
+      - image: alpine
+        command: ["/bin/printenv"]

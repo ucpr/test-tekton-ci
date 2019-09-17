@@ -1,10 +1,10 @@
 plugins:
   ucpr/test-tekton-ci:
-    - size
-    - cat
-    - golint
-    - mergecommitblocker
-    - lgtm
-    - wip
-    - hold
-    - trigger
+  - size
+  - cat
+  - golint
+  - mergecommitblocker
+  - lgtm
+  - wip
+  - hold
+  - trigger
