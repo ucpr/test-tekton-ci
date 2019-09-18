@@ -6,7 +6,7 @@ import (
 
 // Ucpr ...
 func Ucpr() (result int, err error) {
-	return 1, nil
+	return 2, nil
 }
 
 // main function ...
