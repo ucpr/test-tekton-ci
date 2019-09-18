@@ -7,6 +7,10 @@ plugins:
   - lgtm
   - wip
   - hold
-  - trigger
   - approve
   - assign
+  - trigger
+
+triggers:
+  - repo:
+    - ucpr/test-tekton-ci
