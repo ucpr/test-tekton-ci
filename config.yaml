@@ -46,4 +46,3 @@ presubmits:
       containers:
       - image: alpine
         command: ["/bin/printenv"]
-
