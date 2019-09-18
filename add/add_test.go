@@ -4,16 +4,18 @@ import (
 	"testing"
 )
 
-func TestAdd(t *testing.T) {
-	actual := Add(1, 1)
+func TestAddInteger(t *testing.T) {
+	actual := AddInteger(1, 1)
 	expected := 2
 
 	if actual != expected {
 		t.Errorf("got: %v\nwant: %v", actual, expected)
 	}
+}
 
-	actual = Add(5, 5)
-	expected = 10
+func TestAddString(t *testing.T) {
+	actual := AddString("X-", "HOGEHOGE")
+	expected := "X-HOGEHOGE"
 
 	if actual != expected {
 		t.Errorf("got: %v\nwant: %v", actual, expected)
