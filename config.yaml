@@ -30,3 +30,18 @@ presubmits:
       - image: alpine
         command: 
           - "/bin/printenv"
+
+  - name: go-test
+    trigger: "(?m)^/test"
+    rerun_command: "/test"
+    always_run: false
+    skip_report: false
+    agent: kubernetes
+    spec:
+      containers:
+      - image: golang
+        command: 
+          - go
+        args:
+          - test
+          - ./...
