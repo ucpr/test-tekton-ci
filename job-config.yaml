@@ -1,22 +1,3 @@
-tide:
-  merge_method:
-    ucpr/test-tekton-ci: squash
-
-  target_url: https://prow.k8s.io/tide.html
-
-  queries:
-  - repos:
-    - ucpr/test-tekton-ci
-    labels:
-    - lgtm
-    - approved
-    missingLabels:
-    - do-not-merge
-    - do-not-merge/hold
-    - do-not-merge/work-in-progress
-    - needs-ok-to-test
-    - needs-rebase
-
 presubmits:
   ucpr/test-tekton-ci:
   - name: unit-test
