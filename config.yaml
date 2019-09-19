@@ -19,30 +19,14 @@ tide:
 
 presubmits:
   ucpr/test-tekton-ci:
-  - name: test
+  - name: unit-test
     trigger: "(?m)^/test"
     rerun_command: "/test"
-    context: test
-    always_run: true
+    always_run: false
+    skip_report: false
     agent: kubernetes
-    decorate: true
-    spec:
-      containers:
-      - image: golang
-        command: ["go test ..."]
-
-  - name: go-test
-    always_run: false
-    skip_report: false
-    spec:
-    containers:
-      - image: golang
-        command: ["go", "test", "./..."]
-
-  - name: unit-test
-    always_run: false
-    skip_report: false
     spec:
       containers:
       - image: alpine
-        command: ["/bin/printenv"]
+        command: 
+          - "/bin/printenv"
