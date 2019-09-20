@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Pipeline
+metadata:
+  name: golang-test
+spec:
+  resources:
+    - name: source
+      type: git
+  tasks:
+    - name: golang-test
+      taskRef:
+        name: golang-test
+      resources:
+        inputs:
+          - name: source
+            resource: source

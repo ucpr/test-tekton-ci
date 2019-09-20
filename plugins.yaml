@@ -10,9 +10,9 @@ plugins:
   - approve
   - assign
   - trigger
-    #  - dog
-    #  - shrug
-    #  - pony
+  - dog
+  - shrug
+  - pony
 
 triggers:
   - repo:
